@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/drawerLayout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/content">
+        <include layout="@layout/navagation_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cập Nhật Thông Tin"
+                    android:textColor="@color/bg_login"
+                    android:textSize="24dp" />
+
+
+                <ImageView
+                    android:id="@+id/ava"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/person_flat" />
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Tên Đăng Nhâp"
+                    android:textColor="@color/bg_login"
+                    android:textSize="18dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Họ Và Tên"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/btn_login_bg"
+                    android:hint="Họ Và Tên"
+                    android:padding="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mật Khẩu Mới"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <EditText
+                    android:id="@+id/etPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/btn_login_bg"
+                    android:hint="Mật Khẩu Mới"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Địa Chỉ"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+
+                <EditText
+                    android:id="@+id/etAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/btn_login_bg"
+                    android:hint="Địa Chỉ"
+                    android:inputType="textCapWords"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Số Điện Thoại"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/btn_login_bg"
+                    android:hint="Số Điện Thoại"
+                    android:inputType="textCapWords"
+                    android:padding="15dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btSave"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="60dp"
+                            android:text="Save"
+                            android:layout_marginBottom="40dp"/>
+
+                        <Button
+                            android:id="@+id/btCancel"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="50dp"
+                            android:text="Cancel"
+                            android:layout_marginBottom="49dp"/>
+
+                    </TableRow>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_layout">
+
+
+    </android.support.design.widget.NavigationView>
+
+
+
+</android.support.v4.widget.DrawerLayout>
