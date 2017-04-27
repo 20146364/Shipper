@@ -5,15 +5,21 @@ package hungpt.development;
  */
 
 public class DonHang {
+    String SoTK;
     String Username;
     String MoTa;
     String VTN;
+    String VTD;
     String ThoiGian;
+    String MaHH;
 
-    public DonHang(String username, String moTa, String VTN, String thoiGian) {
+    public DonHang(String soTK, String username, String moTa, String VTN, String VTD, String thoiGian, String maHH) {
+        SoTK = soTK;
         Username = username;
         MoTa = moTa;
         this.VTN = VTN;
+        this.VTD = VTD;
         ThoiGian = thoiGian;
+        MaHH = maHH;
     }
 }

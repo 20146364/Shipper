@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/drawerLayout1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/content">
+        <include layout="@layout/navagation_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="XÁC NHẬN ĐƠN GÀNG"
+                    android:textColor="@color/bg_login"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+
+
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Username: "
+                            android:textColor="@color/bg_login"
+                            android:textSize="18dp"
+                            android:id="@+id/id"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:textSize="14dp"
+                            android:id="@+id/stkn"/>
+
+
+                    </TableRow>
+
+                </TableLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="MaHH: "
+                    android:textColor="@color/bg_login"
+                    android:textSize="18dp"
+                    android:id="@+id/tvMaHH"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mô Tả: "
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/etMota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Mô tả"
+                    android:padding="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Địa điểm nhận"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/etVTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Địa Điểm Nhận"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Địa điểm đến"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+
+                <TextView
+                    android:id="@+id/etVTD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Địa điểm đến"
+
+                    android:padding="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian giao hàng:"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/etTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Thời gian giao hàng"
+                    android:padding="15dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btYes"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:text="Đồng ý"
+                            android:layout_marginBottom="40dp"
+                            android:layout_marginLeft="15dp"/>
+
+                        <Button
+                            android:id="@+id/btInbox"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Nhắn tin"
+                            android:layout_marginBottom="49dp"/>
+
+                        <Button
+                            android:id="@+id/btCancel"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Cancle"
+                            android:layout_marginBottom="49dp"/>
+
+                    </TableRow>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu_chudon"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_layout">
+
+
+    </android.support.design.widget.NavigationView>
+
+
+
+
+</android.support.v4.widget.DrawerLayout>

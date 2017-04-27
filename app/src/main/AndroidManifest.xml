@@ -3,6 +3,7 @@
     package="hungpt.development">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB_c5B5DugGwtI9-eQbDRHlwwWXUnJSjdQ"/>
+
+
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +27,11 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Shipper_Activity" />
         <activity android:name=".Acount_Activity" />
+        <activity android:name=".ChiTietDon" />
+        <activity android:name=".ChuDonActivity" />
+        <activity android:name=".ThemDonHang" />
+        <activity android:name=".SuaDonHang" />
+        <activity android:name=".CheckShip"></activity>
     </application>
 
 </manifest>

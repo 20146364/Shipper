@@ -46,14 +46,30 @@
                     android:layout_marginTop="20dp"
                     android:src="@drawable/person_flat" />
 
-                <TextView
-                    android:id="@+id/id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:text="Tên Đăng Nhâp"
-                    android:textColor="@color/bg_login"
-                    android:textSize="18dp" />
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Tên Đăng Nhâp: "
+                            android:textColor="@color/bg_login"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="@color/bg_login"
+                            android:textSize="18dp" />
+                    </TableRow>
+
+                </TableLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -168,6 +184,7 @@
 
 
     </android.support.design.widget.NavigationView>
+
 
 
 

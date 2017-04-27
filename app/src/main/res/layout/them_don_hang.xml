@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/drawerLayout1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/content">
+        <include layout="@layout/navagation_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Tạo Đơn Hàng"
+                    android:textColor="@color/bg_login"
+                    android:textSize="24dp"
+                    android:layout_marginBottom="20dp"/>
+
+
+
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Số Tài Khoản: "
+                            android:textColor="@color/bg_login"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="@color/bg_login"
+                            android:textSize="18dp" />
+                    </TableRow>
+
+                </TableLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mô Tả: "
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <EditText
+                    android:id="@+id/etMota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/btn_login_bg"
+                    android:hint="Mô Tả"
+                    android:padding="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Địa điểm nhận"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/etVTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/btn_login_bg"
+                    android:hint="Địa Điểm Nhận"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Địa điểm đến"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/etVTD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/btn_login_bg"
+                    android:hint="Địa điểm đến"
+                    android:inputType="textCapWords"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian giao hàng:"
+                    android:textColor="@color/bg_login"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <EditText
+                    android:id="@+id/etTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/btn_login_bg"
+                    android:hint="Thời gian giao hàng"
+                    android:inputType="textCapWords"
+                    android:padding="15dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btSave"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="60dp"
+                            android:text="Save"
+                            android:layout_marginBottom="40dp"/>
+
+                        <Button
+                            android:id="@+id/btCancel"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="50dp"
+                            android:text="Cancel"
+                            android:layout_marginBottom="49dp"/>
+
+                    </TableRow>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu_chudon"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_layout">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

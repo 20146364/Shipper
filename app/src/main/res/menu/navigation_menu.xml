@@ -10,10 +10,6 @@
           android:icon="@mipmap/ic_person_pin_black_24dp"
           android:title="Thông tin cá nhân"/>
 
-    <item android:id="@+id/nav_dh"
-        android:icon="@mipmap/ic_assignment_black_24dp"
-        android:title="Danh sách đơn hàng"/>
-
     <item android:id="@+id/nav_hang"
         android:icon="@mipmap/ic_assignment_black_24dp"
         android:title="Đơn hàng đã nhận"/>

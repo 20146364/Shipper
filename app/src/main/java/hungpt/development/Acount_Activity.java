@@ -1,5 +1,7 @@
 package hungpt.development;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -59,19 +61,31 @@ public class Acount_Activity extends AppCompatActivity {
         final String name1 = sharedPreferences.getString("hoten", null);
         final String addr1 = sharedPreferences.getString("diachi", null);
         final String pass1 = sharedPreferences.getString("password", null);
+        final String quyen = sharedPreferences.getString("quyen", null);
+        final String sotk = sharedPreferences.getString("sotk", null);
+
+
         id.setText(ten);
         etphone.setText(phone1);
         name.setText(name1);
         addr.setText(addr1);
         pass.setText(pass1);
 
+
         // tạo thanh toolbar
         final Toolbar toolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(toolbar);
 
         // Tạo navigation menu
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+            mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+            mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+        //else {
+//            mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout1);
+//            mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+        //}
+
 
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
@@ -88,8 +102,13 @@ public class Acount_Activity extends AppCompatActivity {
                 mDrawerLayout.closeDrawers();
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
+                        if(quyen.equals("1")){
                         Intent intent =new Intent(getApplicationContext(), Shipper_Activity.class);
-                        startActivity(intent);
+                        startActivity(intent);}
+                        else {
+                            Intent intent =new Intent(getApplicationContext(), ChuDonActivity.class);
+                            startActivity(intent);
+                        }
                         return true;
                     case R.id.nav_logout:
                         session.logoutUser();

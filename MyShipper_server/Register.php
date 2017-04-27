@@ -1,25 +1,26 @@
 <?php
 include_once("connection.php");
 
-// $username = $_POST["username"];
-// $password = $_POST["password"];
-// $hoten = $_POST["hoten"];
-// $diachi = $_POST["diachi"];
-// $quyen = $_POST["quyen"];
-// $phone = $_POST["phone"];
-$username = "dmDun";
-$password = "123";
-$hoten = "1235";
-$diachi = "123";
-$quyen = "1";
-$phone = "123456";
+$username = $_POST["username"];
+$password = $_POST["password"];
+$hoten = $_POST["hoten"];
+$diachi = $_POST["diachi"];
+$quyen = $_POST["quyen"];
+$phone = $_POST["phone"];
+// $username = "dmDun";
+// $password = "123";
+// $hoten = "1235";
+// $diachi = "123";
+// $quyen = "1";
+// $phone = "123456";
 
  $sql="INSERT INTO `khachhang`( `Username`, `Password`,`hoten`,`diachi`, `phone`,`quyen`) VALUES (?,?,?,?,?,?)";
 
-   $statement = mysqli_prepare($conn, $sql);
- if ( !$statement) {
-echo "Loi";
-}else{
+ $statement = mysqli_prepare($conn, $sql);
+  if ( !$statement) {
+    echo "Loi";
+    }
+  else{
    mysqli_stmt_bind_param($statement, "ssssss", $username, $password, $hoten, $diachi,  $phone, $quyen);
    mysqli_stmt_execute($statement);
 
@@ -28,7 +29,7 @@ echo "Loi";
     mysqli_stmt_execute($statement1);
 
     mysqli_stmt_store_result($statement1);
-    mysqli_stmt_bind_result($statement1, $SoTK, $username , $password, $hoten , $diachi,$phone, $quyen);
+    mysqli_stmt_bind_result($statement1, $SoTK, $username , $password, $hoten , $diachi, $phone, $quyen);
 
     $response1 = array();
     $response1["success"] = false;

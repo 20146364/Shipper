@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_menu1">
+    <item android:id="@+id/nav_home"
+        android:icon="@mipmap/ic_home_black_24dp"
+        android:title="Trang Chủ"
+        />
+
+    <item android:id="@+id/nav_acount"
+        android:icon="@mipmap/ic_person_pin_black_24dp"
+        android:title="Thông tin cá nhân"/>
+
+    <item android:id="@+id/nav_dh"
+        android:icon="@mipmap/ic_description_black_24dp"
+        android:title="Tạo đơn hàng mới"/>
+
+    <item android:id="@+id/nav_hang"
+        android:icon="@mipmap/ic_assignment_black_24dp"
+        android:title="Đơn hàng đã đăng"/>
+
+
+    <item android:id="@+id/nav_setting"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:title="Cài Đặt"/>
+
+    <item android:id="@+id/nav_logout"
+        android:icon="@mipmap/ic_power_settings_new_black_24dp"
+        android:title="Log Out"/>
+
+</menu>

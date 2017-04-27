@@ -13,7 +13,7 @@ import java.util.Map;
  */
 
 public class Update_User extends StringRequest{
-    public static final String UPDATE_REQUEST_URL = "http://192.168.1.52/myshipper/update_user.php";
+    public static final String UPDATE_REQUEST_URL = "http://192.168.1.19/myshipper/update_user.php";
     private Map<String, String> params;
 
     public Update_User(String username, String password, String hoten, String diachi, String phone, Response.Listener<String> listener){

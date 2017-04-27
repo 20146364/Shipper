@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:text="Mô Tả"
         android:textSize="13dp"
-        android:id="@+id/tvMota"/>
+        android:id="@+id/tvMota"
+        android:textColor="@color/input_register_bg"/>
    <TableLayout
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
@@ -31,14 +32,6 @@
                android:text="Vi Trí Nhận"
                android:textStyle="italic"
                android:textSize="11dp"
-               android:textColor="@color/red"
-               />
-           <TextView
-               android:id="@+id/tvThoiGian"
-               android:text="Thời Gian"
-               android:textSize="11dp"
-               android:textStyle="italic"
-               android:layout_marginLeft="10dp"
                android:textColor="@color/red"
                />
        </TableRow>

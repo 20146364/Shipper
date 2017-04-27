@@ -2,4 +2,6 @@
     <string name="app_name">Shipper</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+
+    <string name="google_api_key">AIzaSyAYLvMnEjnae3wEotnp7RjWPm3USGU8CRk</string>
 </resources>

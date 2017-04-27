@@ -1,5 +1,4 @@
 package hungpt.development;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
@@ -63,12 +62,32 @@ public class LoginActivity extends AppCompatActivity {
                                 String quyen = jsonResponse.getString("quyen");
                                 String hoten = jsonResponse.getString("hoten");
                                 String diachi = jsonResponse.getString("diachi");
+                                String sotk = jsonResponse.getString("sotk");
 
                                 if(quyen.equals("1")) {
 
                                     Intent intent =new Intent(getApplicationContext(), Shipper_Activity.class);
 
                                     SharedPreferences.Editor edit= sharedPreferences.edit();
+                                    edit.putString("sotk", sotk);
+                                    edit.putString("username", username );
+                                    edit.putString("password", password);
+                                    edit.putString("hoten", hoten);
+                                    edit.putString("diachi", diachi);
+                                    edit.putString("phone", phone);
+                                    edit.putString("quyen", quyen);
+
+
+                                    edit.commit();
+
+                                    startActivity(intent);
+
+
+                                }
+                                else{
+                                    Intent intent = new Intent(getApplicationContext(), ChuDonActivity.class);
+                                    SharedPreferences.Editor edit= sharedPreferences.edit();
+                                    edit.putString("sotk", sotk);
                                     edit.putString("username", username );
                                     edit.putString("password", password);
                                     edit.putString("hoten", hoten);
@@ -79,12 +98,6 @@ public class LoginActivity extends AppCompatActivity {
                                     edit.commit();
 
                                     startActivity(intent);
-
-
-                                }
-                                else{
-                                    Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                                    LoginActivity.this.startActivity(intent);
                                 }
 
 

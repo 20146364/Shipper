@@ -51,8 +51,8 @@ public class DonHangAdapter extends BaseAdapter {
         MoTa.setText(arrayDonHang.get(position).MoTa);
         TextView VTN = (TextView) convertView.findViewById(R.id.tvVTN);
         VTN.setText(arrayDonHang.get(position).VTN);
-        TextView ThoiGian = (TextView) convertView.findViewById(R.id.tvThoiGian);
-        ThoiGian.setText(arrayDonHang.get(position).ThoiGian);
+//        TextView ThoiGian = (TextView) convertView.findViewById(R.id.tvThoiGian);
+//        ThoiGian.setText(arrayDonHang.get(position).ThoiGian);
 
 
         return  convertView;
